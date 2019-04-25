@@ -1,0 +1,118 @@
+#mainContainer{
+}
+.text1{ /* Header 1 */      font-family: "Trebuchet MS", Helvetica, sans-serif;}
+.text2{ /* Header 2*/       font-family: "Trebuchet MS", Helvetica, sans-serif;}
+.text3{ /* Menu text*/      font-family: 'Poiret One', cursive; color:white; font-size: 14pt; }
+.text4{ /* regular text */  font-family: "Trebuchet MS", Helvetica, sans-serif;}
+.text5{ /* Data Text */     font-family: "Trebuchet MS", Helvetica, sans-serif;}
+.text6{ /* Kommentary text*/font-family: "Trebuchet MS", Helvetica, sans-serif;}
+
+:root {
+    /*color 1 = IMPORTANT color */
+    --color1: #d20f41;
+    /*--color1:#F80652;
+    /*color 2 = Base color */
+    --color2:#E8F1F8;
+    /*color 3 = second Base color */
+    --color3:#ADC4D6;
+    /*color 4 = third Base color */
+    --color4:#222F3F;
+    /*color 5 = fourth Base color */
+    --color5:#101C28;
+    /*search Bar Color*/
+    --color6: #2f4359;
+}
+
+:root {
+    --color1:#CAF200;
+    --color2:#E2E3DF;
+    --color3:#FFFEFC;
+    --color4:#2E3233;
+    --color5:#515B5E;
+    --color6: #434344;
+}
+body{
+    background-color: var(--color2);
+}
+tr{
+ transition-duration: 0.09s;
+}
+tr:nth-child(even) {
+    background-color: var(--color3);
+}
+tr:hover{
+    background-color:var(--color1);
+    transition-duration: 0.09s;
+}
+/* MENU Container*/
+
+@media screen and (min-width: 0px) and (max-width: 1279px){
+    #menuContainer {
+        background-image: linear-gradient(90deg,var(--color4), var(--color5));
+    }
+}
+@media screen and (min-width: 1280px) {
+    #menuContainer {
+        background-image: linear-gradient(var(--color4), var(--color5));
+    }
+}
+    #menuHomeButtont{
+        text-align: center;
+    }
+
+    .menuObject ,.menuSearchBar {
+        transition-duration: 0.2s;
+    }
+    .menuSearchBar {text-align:left;}
+    .menuObject:hover{
+        transition-duration: 0.2s;
+        background-color: var(--color1);
+    }
+    .menuObject:active{
+        transition-duration: 0.2s;
+        background-color:var(--color3);
+    }
+    .menuSearchBar .inputTSearch{
+        background-color: var(--color4);
+        color: var(--color6);
+        transition:0.2s;
+    }
+    .inputTSearch:active ,.inputTSearch:hover{
+        color: var(--color3);
+        transition:0.2s;
+    }
+
+        #menuWrapper{
+            background-color: var(--color4);
+        }
+    /* Content Container Generel*/
+    .contentContainer{
+    }
+
+    /*Profile Specifik Content */
+    #profileContainer{
+    }
+        #profileImage{
+        }
+        #profileImage img{
+        }
+        .profileInfo{
+            font-family: 'Nanum Gothic Coding', monospace;
+        }
+
+    /* Log Window - Scaleable */
+    #profileLogContainer{
+    }
+        #profileTableHeader{
+            background-color: var(--color4);
+            color: var(--color3);
+        }
+        #profileLogTable{
+        }
+        table{
+        }
+        table, th, td {
+            font-family: 'Nanum Gothic Coding', monospace;
+        }
+        td{
+        }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">   <!-- font-family: 'Poiret One', cursive; -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">  <!--font-family: 'Josefin Slab', serif; -->
+
+    <!-- Reset StyleSheet-->
+    <link rel="stylesheet" href="StyleSheet/styleReset.css" />
+
+    <!-- Setup Basic Style, Colors, Fonts-->
+    <!--[if !IE]><!--><link rel="stylesheet"  href="StyleSheet/styleSheetBasics.css" /><!--<![endif]-->
+    <!--[if IE]><!--><link rel="stylesheet" type="text/css" href="StyleSheet/styleIEbrowser.css" /><!--<![endif]-->
+
+    <!-- Sorting Through Users by Window Size -->
+    <link rel="stylesheet" href="StyleSheet/stylePhonScreen.css"/>
+    <link rel="stylesheet" href="StyleSheet/styleSmallScreen.css" />
+    <link rel="stylesheet" href="StyleSheet/styleRegScreen.css" />
+    <link rel="stylesheet" href="StyleSheet/styleLarScreen.css" />
+    <%!
+    public String onClickGetInputSort(HTMLHtmlElement thisElement){
+    String value = thisElement.getAttribute("Value");
+
+    return "hej";
+    }
+
+    %>
+    <script type="text/javascript">
+        function methodGETinputTd(theObject) {
+            var value = theObject.value;
+            var xmlHttp = new XMLHttpRequest();
+
+
+        }
+
+
+    </script>
+
+</head>
+<body>
+<div id="mainContainer">
+    <!--Show Allmeasurement log-->
+    <div style=" display:none; visibility:hidden;" class="contentContainer">
+        <table id="LargeListingTableHeader">
+            <tr><th> <b>1</b> </th><th> <b>2</b>  </th><th> <b>3</b>  </th><th> <b>4</b>  </th></tr>
+        </table>
+        <table id="LargeListingTableLog" >
+            <tr><td> noget første Linje</td><td> noget 2</td><td> noget 3</td><td> noget 4</td></tr>
+            <tr><td>  noget 1</td><td value= "td_2" > noget 2</td><td> noget 3</td><td> noget 4</td></tr>
+        </table>
+    </div>
+
+    <!--Show a Simple Persons information-->
+    <div style="visibility: visible;" class="contentContainer">
+        <div class="profileContainer">
+            <div id="profileImage"><img src="images/templateProfileImage.png"/></div>
+            <div class="profileInfo"><p>Priscilla Von Kardoz</p></div>
+            <div class="profileInfo"><p>tlf : 16 17 88 61</p></div>
+            <div class="profileInfo"><p>mail : noget@noget.dk</p></div>
+            <div class="profileInfo"><p>Rolle 1</p></div>
+            <div class="profileInfo"><p>Rolle 2</p></div>
+            <div class="profileInfo"><p>...</p></div>
+        </div>
+        <div class="profileLogContainer">
+            <table id="profileTableHeader">
+                <tr><th> <b>1</b> </th><th> <b>2</b>  </th><th> <b>3</b>  </th><th> <b>4</b> </th></tr>
+            </table>
+            <table id="profileLogTable" >
+                <tr>
+                    <td> første Linje</td><td> noget 2</td><td> noget 3</td><td> noget 4</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <!--Menu-->
+    <ul id="menuContainer">
+        <li class="menuObject menuChildOdd" id="menuHomeButton"><div class="text3">Home</div></li>
+        <li class="menuSearchBar menuChildEven">
+            <form  action="">
+                <input class="inputTSearch" value="Search" type="search" name="q"><br>
+            </form>
+        </li>
+        <li>
+            <input type="checkbox" id="AccordionMenuInput">
+            <label class="LabelSign" for="AccordionMenuInput" ></label>
+            <ul id="menuWrapper">
+                <li class="menuObject menuChildOdd"> <b class="text3">Admin</b></li>
+                <li class="menuObject menuChildEven"><b class="text3">System Users</b></li>
+                <li class="menuObject menuChildOdd"> <b class="text3">Overall Log</b></li>
+                <li class="menuObject menuChildEven"><b class="text3">Bub im a fish</b></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

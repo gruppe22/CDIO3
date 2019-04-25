@@ -1,0 +1,88 @@
+#mainContainer{
+}
+.text1{ /* Header 1 */      font-family: "Trebuchet MS", Helvetica, sans-serif;}
+.text2{ /* Header 2*/       font-family: "Trebuchet MS", Helvetica, sans-serif;}
+.text3{ /* Menu text*/      font-family: 'Poiret One', cursive; color:white; font-size: 14pt; }
+.text4{ /* regular text */  font-family: "Trebuchet MS", Helvetica, sans-serif;}
+.text5{ /* Data Text */     font-family: "Trebuchet MS", Helvetica, sans-serif;}
+.text6{ /* Kommentary text*/font-family: "Trebuchet MS", Helvetica, sans-serif;}
+
+body{
+    background-color: #E8F1F8;
+}
+tr{
+    transition-duration: 0.09s;
+}
+tr:nth-child(even) {
+    background-color: #ADC4D6;
+}
+tr:hover{
+    background-color:#d20f41;
+    transition-duration: 0.09s;
+}
+/* MENU Container*/
+
+@media screen and (min-width: 0px) and (max-width: 1279px){
+    #menuContainer {
+        background-image: linear-gradient(90deg,#222F3F, #101C28);
+    }
+}
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+    #menuContainer {
+        background-image: linear-gradient(#222F3F, #101C28);
+    }
+}
+#menuHomeButtont{
+}
+
+.menuObject ,.menuSearchBar {
+    transition-duration: 0.2s;
+}
+.menuSearchBar {text-align:left;}
+.menuObject:hover{
+    transition-duration: 0.2s;
+    background-color: #d20f41;
+}
+.menuObject:active{
+    transition-duration: 0.2s;
+    background-color:#ADC4D6;
+}
+.menuSearchBar .inputTSearch{
+    background-color: #222F3F;
+    color: #2f4359;
+    transition:0.2s;
+}
+.inputTSearch:active ,.inputTSearch:hover{
+    color: #ADC4D6;
+    transition:0.2s;
+}
+
+/* Content Container Generel*/
+.contentContainer{
+}
+
+/*Profile Specifik Content */
+#profileContainer{
+}
+#profileImage{
+}
+#profileImage img{
+}
+.profileInfo{
+}
+
+/* Log Window - Scaleable */
+#profileLogContainer{
+}
+#profileTableHeader{
+    background-color: #222F3F;
+    color: #ADC4D6;
+}
+#profileLogTable{
+}
+table{
+}
+table, th, td {
+}
+td{
+}

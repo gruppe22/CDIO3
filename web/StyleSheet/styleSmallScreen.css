@@ -1,0 +1,194 @@
+@media screen and (min-width: 660px) and (max-width: 1279px) {
+    div{
+        float:left;
+    }
+
+    :root{
+        --100PScreenSize:1279px;
+
+    }
+
+    #mainContainer{
+        width:100%;
+    }
+        .contentContainer{
+            height:100%;
+            width:100%;
+        }
+
+    /*Profile */
+    .profileContainer {
+        margin:40px 0px 0px 0px;
+        width: 100%;
+        height:120px;
+    }
+        #profileImage {
+            height:100%;
+            margin:1%;
+
+            float:left;
+        }
+            #profileImage img {
+                max-width:100%;
+                max-height:100%;
+            }
+        .profileInfo {
+            width: auto;
+            margin: 2% 0 0 5%;
+            float:left;
+        }
+    /* Profile Log */
+    .profileLogContainer{
+        height:auto;
+        width:100%;
+    }
+        .profileLogContainer td, .profileLogContainer th{
+            width:25%;
+        }
+        #profileLogContainer table{
+            width: 100%;
+            float: right;
+        }
+        #profileTableHeader{
+            margin: 40px 0 0 0;
+            width: 100%;
+        }
+            #profileTableHeader th{
+                padding:5px 0 5px 0;
+            }
+        #profileLogTable{
+            width: 100%;
+        }
+            #profileLogTable td{
+                padding:5px 0 5px 0;
+                text-align: center;
+            }
+    /* Large Listings Log*/
+    #LargeListingTableHeader{
+        float: right;
+        width: 100%;
+        background-color: #666;
+        position:fixed;
+        top:40px;
+        height:25px;
+    }
+        #LargeListingTableHeader td, #LargeListingTableLog td{
+            padding:5px 0 5px 0;
+            text-align: center;
+        }
+    #LargeListingTableLog{
+        margin:65px 0 0 0;
+        float: right;
+        width: 100%;
+    }
+
+
+    /* MENU Container*/
+    #menuContainer {
+        position: fixed;
+        top: 0;
+        height: 40px;
+        width:100%;
+    }
+    /*menu Objects  */
+        .menuObject{
+            width:120px;
+            padding:10px 5px 0 5px;
+            height: 40px;
+            text-align: center;
+        }
+        .menuObject:hover {
+            padding:10px 5px 0 5px;
+            width: 140px;
+            margin: 0 -10px 0 0;
+            overflow:visible;
+        }
+        /* Making Menu Lines Destinct*/
+        .menuChildEven {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        .menuChildOdd {
+        }
+    /* UpperMenu Buttons */
+        #AccordionMenuInput[type=checkbox]{
+            display:none;
+        }
+        #menuHomeButton {
+            width: 110px;
+            height: 30px;
+            float:left;
+            margin:0 0 0 40px;
+        }
+            #menuHomeButton:hover {
+                width: 110px;
+                height: 40px;
+                float:left;
+                margin:0 0 -10px 40px;
+            }
+        .menuSearchBar {
+            text-align: left;
+            float:right;
+            display:block;
+            background-color: rgba(0, 0, 0, 0);
+        }
+            .inputTSearch{
+                border-radius: 4px;
+                margin:5px 5px 0 0;
+                padding: 5px 5px 5px 5px;
+                border: 2px dotted;
+                color: var(--color6);
+                width: 200px;
+            }
+
+    /* Accordion Wrapper*/
+        #menuWrapper{
+            height: 0;
+            width: 130px;
+            padding:0;
+            overflow:hidden;
+
+            border-radius:0 0 2px 2px;
+            margin: 40px 0 0 0;
+
+            transition-property:padding , height, hidden;
+            transition-duration: 0.2s,0.2s,0s;
+            transition-delay: 0s, 0s, 2s;
+        }
+        /*Accordion Symbols and Functionality*/
+            #AccordionMenuInput[type=checkbox] + label{
+                width: 30px;
+                height: 35px;
+                padding: 0px 5px 5px 5px;
+                margin: 0;
+                position: absolute;
+                top: 0px;
+                float: left;
+            }
+            input[type=checkbox] + label:before {
+                content: "\2261";
+                font-size: 40px;
+                vertical-align: bottom;
+                color: #fff;
+            }
+            #AccordionMenuInput[type=checkbox]:checked + label + #menuWrapper{
+                height:200px;
+                overflow:visible;
+                padding:10px 0 10px 0;
+
+                transition-property:padding , height, visible;
+                transition-duration: 0.2s,0.2s,0s;
+                transition-delay: 0s, 0s, 5s;
+            }
+            .LagelSign{
+                display: block;
+            }
+            .LabelSign:hover {
+                color: #eee;
+            }
+            .LabelSign:active {
+                color: #ddd;
+            }
+
+
+
+}
