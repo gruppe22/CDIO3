@@ -32,9 +32,7 @@ public class ContentProvider {
             ingredie.add(thisStr2);
         }
     }
-
     public LinkedList<String[]> getLog(String informationCategory) {
-        //String[][] a;
         switch(informationCategory){
             case "PROFILES":
                 return profiles;
@@ -45,5 +43,4 @@ public class ContentProvider {
         }
         return null;
     }
-
 }

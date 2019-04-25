@@ -38,7 +38,6 @@
                 }
                 out.print("</tr></table> " +
                           "<table id=\"LargeListingTableLog\" >");
-
                 while(myQue.peek() != null) {
                     thisRow = myQue.poll();
                     out.print("<tr>");
@@ -46,10 +45,8 @@
                     for (int i = 0; i < thisRow.length; i++) {
                         out.print("<td> " + thisRow[i] + "</td>");
                     }
-
                     out.print("</tr>");
                 }
-
                 out.print("</table>");
             }
         }
