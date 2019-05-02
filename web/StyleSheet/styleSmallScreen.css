@@ -2,20 +2,16 @@
     div{
         float:left;
     }
-
     :root{
         --100PScreenSize:1279px;
-
     }
-
     #mainContainer{
         width:100%;
     }
-        .contentContainer{
+        #contentContainer{
             height:100%;
             width:100%;
         }
-
     /*Profile */
     .profileContainer {
         margin:40px 0px 0px 0px;
@@ -25,7 +21,6 @@
         #profileImage {
             height:100%;
             margin:1%;
-
             float:left;
         }
             #profileImage img {

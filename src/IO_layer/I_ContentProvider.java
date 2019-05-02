@@ -4,8 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public interface I_ContentProvider {
-    LinkedList<String[]> getLog(String informationCategory, String sorting);
-    void showEmployeeLog( String typeOfEmployee );
-    void showEmployeeLog();
-    void showPI();
+    LinkedList<String[]> getCommand(String tableName, String category, String content);
+    String[] getProfile(String category, String Content);
+    boolean isProfile(String tableName, String category, String content);
 }

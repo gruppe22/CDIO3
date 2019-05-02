@@ -4,17 +4,17 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class ContentProvider {
+public class ContentProvider implements  I_ContentProvider {
 
     private LinkedList<String[]> profiles = new LinkedList<>();
     private LinkedList<String[]> produkts = new LinkedList<>();
     private LinkedList<String[]> ingredie = new LinkedList<>();
 
     public ContentProvider() {
-        String[] thisStr = {"Produkts 1", "Produkts 2", "Produkts 3", "Produkts 4", "Produkts 5"};
+        String[] thisStr = {"Category 1", "Category 2", "Category 3", "Category 4", "Category 5"};
         produkts.add(thisStr);
         for (int i = 0; i < 100; i++) {
-            String[] thisStr2 = {"Row " + i + "column 1", "column 2", "column 3", "column 4", "column 5"};
+            String[] thisStr2 = {"Row " + i , "column 2", "column 3", "column 4", "column 5"};
             produkts.add(thisStr2);
         }
 
@@ -32,15 +32,16 @@ public class ContentProvider {
             ingredie.add(thisStr2);
         }
     }
-    public LinkedList<String[]> getLog(String informationCategory) {
-        switch(informationCategory){
-            case "PROFILES":
-                return profiles;
-            case "PRODUKTS":
-                return produkts;
-            case "INGREDIENTS":
-                return ingredie;
-        }
-        return null;
+
+    public LinkedList<String[]> getCommand(String tableName, String category, String content){
+
+        return produkts;
+    }
+    public boolean isProfile(String tableName, String category, String content){
+
+        return false;
+    }
+    public String[] getProfile(String category, String Content){
+        return profiles.get(2);
     }
 }

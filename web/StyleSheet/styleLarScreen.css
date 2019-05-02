@@ -50,7 +50,7 @@
                 }
 
         /* Content Container Generel*/
-        .contentContainer{
+        #contentContainer{
             width:1720px;
             height:100%;
             float:right;

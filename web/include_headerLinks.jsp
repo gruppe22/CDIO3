@@ -27,3 +27,10 @@
 <link rel="stylesheet" href="StyleSheet/styleSmallScreen.css" />
 <link rel="stylesheet" href="StyleSheet/styleRegScreen.css" />
 <link rel="stylesheet" href="StyleSheet/styleLarScreen.css" />
+
+<!-- Jquery Links -->
+<script src="scripts/Jquery-3.4.0.js"></script>                                         <!-- JQUERY STANDARD        -->
+<script src="scripts/jquery-ui-1.12.1.custom/jquery-ui.js"></script>                    <!-- JQUERY UI              -->
+<link rel="stylesheet" href="scripts/jquery-ui-1.12.1.custom/jquery-ui.css">            <!-- JQUERY STYLE SHEET     -->
+<link rel="stylesheet" href="scripts/jquery-ui-1.12.1.custom/jquery-ui.theme.css">                <!-- JQUERY STYLE SHEET     -->
+

@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<meta http-equiv="refresh" content="0; URL='Index.jsp' />
-
 <head>
     <title>W3.CSS Template</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Fonts -->
@@ -25,62 +22,20 @@
     <link rel="stylesheet" href="StyleSheet/styleSmallScreen.css" />
     <link rel="stylesheet" href="StyleSheet/styleRegScreen.css" />
     <link rel="stylesheet" href="StyleSheet/styleLarScreen.css" />
-    <%!
-    public String onClickGetInputSort(HTMLHtmlElement thisElement){
-    String value = thisElement.getAttribute("Value");
 
-    return "hej";
-    }
-
-    %>
-    <script type="text/javascript">
-        function methodGETinputTd(theObject) {
-            var value = theObject.value;
-            var xmlHttp = new XMLHttpRequest();
-
-
-        }
-
-
-    </script>
+    <!-- Jquery Links -->
+    <script src="scripts/Jquery-3.4.0.js"></script>                                         <!-- JQUERY STANDARD        -->
+    <script src="scripts/jquery-ui-1.12.1.custom/jquery-ui.js"></script>                    <!-- JQUERY UI              -->
+    <link rel="stylesheet" href="scripts/jquery-ui-1.12.1.custom/jquery-ui.css">            <!-- JQUERY STYLE SHEET     -->
+    <link rel="stylesheet" href="scripts/jquery-ui-1.12.1.custom/jquery-ui.theme.css">                <!-- JQUERY STYLE SHEET     -->
 
 </head>
 <body>
 <div id="mainContainer">
-    <!--Show Allmeasurement log-->
-    <div style=" display:none; visibility:hidden;" class="contentContainer">
-        <table id="LargeListingTableHeader">
-            <tr><th> <b>1</b> </th><th> <b>2</b>  </th><th> <b>3</b>  </th><th> <b>4</b>  </th></tr>
-        </table>
-        <table id="LargeListingTableLog" >
-            <tr><td> noget første Linje</td><td> noget 2</td><td> noget 3</td><td> noget 4</td></tr>
-            <tr><td>  noget 1</td><td value= "td_2" > noget 2</td><td> noget 3</td><td> noget 4</td></tr>
-        </table>
-    </div>
-
-    <!--Show a Simple Persons information-->
+      <!--Show a Simple Persons information-->
     <div style="visibility: visible;" class="contentContainer">
-        <div class="profileContainer">
-            <div id="profileImage"><img src="images/templateProfileImage.png"/></div>
-            <div class="profileInfo"><p>Priscilla Von Kardoz</p></div>
-            <div class="profileInfo"><p>tlf : 16 17 88 61</p></div>
-            <div class="profileInfo"><p>mail : noget@noget.dk</p></div>
-            <div class="profileInfo"><p>Rolle 1</p></div>
-            <div class="profileInfo"><p>Rolle 2</p></div>
-            <div class="profileInfo"><p>...</p></div>
-        </div>
-        <div class="profileLogContainer">
-            <table id="profileTableHeader">
-                <tr><th> <b>1</b> </th><th> <b>2</b>  </th><th> <b>3</b>  </th><th> <b>4</b> </th></tr>
-            </table>
-            <table id="profileLogTable" >
-                <tr>
-                    <td> første Linje</td><td> noget 2</td><td> noget 3</td><td> noget 4</td>
-                </tr>
-            </table>
-        </div>
-
     </div>
+
     <!--Menu-->
     <ul id="menuContainer">
         <li class="menuObject menuChildOdd" id="menuHomeButton"><div class="text3">Home</div></li>
@@ -93,13 +48,55 @@
             <input type="checkbox" id="AccordionMenuInput">
             <label class="LabelSign" for="AccordionMenuInput" ></label>
             <ul id="menuWrapper">
-                <li class="menuObject menuChildOdd"> <b class="text3">Admin</b></li>
-                <li class="menuObject menuChildEven"><b class="text3">System Users</b></li>
-                <li class="menuObject menuChildOdd"> <b class="text3">Overall Log</b></li>
-                <li class="menuObject menuChildEven"><b class="text3">Bub im a fish</b></li>
+                <li class="menuObject menuChildOdd"  id="menuBtn1"> <b class="text3">Admin</b></li>
+                <li class="menuObject menuChildEven" id="menuBtn2"><b class="text3">System Users</b></li>
+                <li class="menuObject menuChildOdd"  id="menuBtn3"> <b class="text3">Overall Log</b></li>
+                <li class="menuObject menuChildEven" id="menuBtn4"><b class="text3">Bub im a fish</b></li>
             </ul>
         </li>
     </ul>
 </div>
+
+<script>
+
+    var $content = $(".contentContainer");
+    // MENU BUTTONS.
+    $("#menuBtn1").click(function(){
+        $.get( "ContentGetter.jsp", { table: "users", category: "admin", content: "null"}, function( data ) {
+            // alert(data);
+            $content.html(data);
+        });
+    });
+    $("#menuBtn2").click(function(){
+        $.get( "ContentGetter.jsp", { table: "users", category: "null", content: "null"}, function( data ) {
+            // alert(data);
+            $content.html(data);
+        });
+    });
+    $("#menuBtn3").click(function(){
+        $.get( "ContentGetter.jsp", { table: "log", category: "null", content: "null"}, function( data ) {
+            // alert(data);
+            $content.html(data);
+        });
+    });
+    $("#menuBtn4").click(function(){
+        $.get( "ContentGetter.jsp", { table: "extra", category: "null", content: "null"}, function( data ) {
+            // alert(data);
+            $content.html(data);
+        });
+    });
+
+    // TABLE CLICK FUNCTIONS.
+    $("td").click(function(){
+        var $category   = $(this).attr("Category");
+        var $content    = $(this).text();
+        var $table      = $("#profileLogTable").attr("tableName");
+
+        $.get( "ContentGetter.jsp", { table: $table, category: $category, content: $content }, function( data ) {
+            // alert(data);
+            $content.html(data);
+        });
+    })
+</script>
 </body>
 </html>
